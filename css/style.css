@@ -55,9 +55,6 @@ body {
   position: absolute;
   width: 58%;
   height: 86%;
-  background-image: url(../images/hero-bg.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   top: 25px;
   right: 0;
 }
@@ -610,7 +607,106 @@ a:focus {
   margin-top: -125px;
 }
 
+.info_section {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
 
+.info_section h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f9fcfb;
+  margin-bottom: 35px;
+}
+
+.info_section img {
+  width: 100%;
+}
+
+.info_section ul {
+  padding: 0;
+}
+
+.info_section ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.info_section ul li a,
+.info_section ul li a:hover {
+  color: #fff;
+}
+
+.info_section h5 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #fff;
+  padding: 1px 3px;
+  border-bottom: 2px solid #feb543;
+}
+
+.info_section .social-box {
+  margin: 25px 0;
+}
+
+.info_section .social-box img {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.form_container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info_section .form_container label {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.info_section .form_container input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+  background-color: #fff;
+  margin-left: 45px;
+  margin-right: 10px;
+}
+
+.info_section .form_container button {
+  display: inline-block;
+  padding: 8px 50px;
+  background-color: #ffca56;
+  color: #f9fcfb;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border: none;
+  border: none;
+  text-transform: uppercase;
+}
+
+.info_section .form_container button:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.info_section .form_container button:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* end info section */
 /* footer section*/
 .footer_section {
   font-weight: 500;
