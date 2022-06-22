@@ -158,6 +158,12 @@ a:focus {
   background-image: url(../images/menu.png);
   background-size: 40px;
 }
+.dropdown-menu{
+  background-color: #252525;
+}
+.dropdown-item:hover{
+  background:#864ddf;
+}
 
 /*end header section*/
 /* slider section */
