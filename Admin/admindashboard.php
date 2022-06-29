@@ -1,3 +1,9 @@
+<?php
+session_start();
+error_reporting(0);
+include('include/config.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,71 +56,12 @@
   </head>
 
   <body>
-    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
-        <div class="nano">
-            <div class="nano-content">
-                <ul>
-                    <div class="logo"><a href="index.html">
-                        <img src="images/donate4all.png" alt="Logo" width="40%"/><span>Donate4All</span></a></div>
-                    <li class="label">Main</li>
-                    <li><a href="admindashboard.html"><i class="ti-home"></i> Dashboard</a>
-                    </li>
 
-                    <li class="label">Management</li>
-                    <li><a class="sidebar-sub-toggle"><i class="ti-agenda"></i> Manage Request <span
-                                class="sidebar-collapse-icon ti-angle-down"></span></a>
-                        <ul>
-                            <li><a href="viewrequest.html"><i class="ti-eye"></i>View Request</a></li>
-                            <li><a href="approverequest.html"><i class="ti-check-box"></i>Approve Request</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="viewdonation.html"><i class="ti-money"></i> View Donation </a></li>
-                </ul>  
-            </div>
-        </div>
-      </div>
-    </div>
+  <?php include('include/sidebar.php');?>
     <!-- /# sidebar -->
 
-    <div class="header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="float-left">
-              <div class="hamburger sidebar-toggle">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-              </div>
-            </div>
-            <div class="float-right">
-              <div class="dropdown dib">
-                <div class="header-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  <span class="user-avatar">Admin <i class="ti-angle-down f-s-10"></i></span>
-                </div>
-                <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
-                  <ul>
-                    <li class="dropdown-item">
-                      <a href="adminprofile.html">
-                        <i class="ti-user"></i>
-                        <span>Profile</span>
-                      </a>
-                    </li>
-                    <li class="dropdown-item">
-                      <a href="#">
-                        <i class="ti-power-off"></i>
-                        <span>Logout</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--Header-->
+  <?php include('include/header.php');?>
 
     <div class="content-wrap">
       <div class="main">
@@ -228,9 +175,7 @@
 
             <div class="row">
               <div class="col-lg-12">
-                <div class="footer">
-                  <p>2022 © Donate4All</p>
-                </div>
+                <?php include('footer.php'); ?>
               </div>
             </div>
           </section>
