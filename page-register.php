@@ -21,7 +21,7 @@ else if($group=="Recipient")
 if($query)
 {
 	echo "<script>alert('Successfully Registered. You can login now');</script>";
-	//header('location:user-login.php');
+	header('location:index.html');
 }
 }
 ?>
