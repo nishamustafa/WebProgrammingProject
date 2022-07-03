@@ -7,21 +7,21 @@ $fullName=$_POST['full_name'];
 $age=$_POST['age'];
 $gender=$_POST['gender'];
 $email=$_POST['email'];
-$phone=$_POST['phone'];
+$phone=$_POST['phone_num'];
 $password=md5($_POST['password']);
 $group=$_POST['registrationGroup'];
 if($group=="Donor")
 {
-    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
+    $query=mysqli_query($con,"insert into donor(username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email','$phone')");
 }
 else if($group=="Recipient")
 {
-    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
+    $query=mysqli_query($con,"insert into recipient(username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email','$phone')");
 }
 if($query)
 {
 	echo "<script>alert('Successfully Registered. You can login now');</script>";
-	//header('location:user-login.php');
+	header('location:index.html');
 }
 }
 ?>
@@ -85,15 +85,15 @@ if($query)
                                     <label>Gender</label>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="male">
-                                        <label class="from-check-label" for="gender1">Male</label>
+                                        <label class="from-check-label" for="male">Male</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="female">
-                                        <label class="from-check-label" for="gender2">Female</label>
+                                        <label class="from-check-label" for="female">Female</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="other">
-                                        <label class="from-check-label" for="gender2">Other</label>
+                                        <label class="from-check-label" for="other">Other</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -116,7 +116,7 @@ if($query)
                                     <label>Register as</label>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="registrationGroup" value="Donor">
-                                        <label class="from-check-label" for="option1">Donor</label>
+                                        <label class="from-check-label" for="Donor">Donor</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="registrationGroup" value="Recipient">
@@ -128,7 +128,7 @@ if($query)
 										<input type="checkbox"> Agree the terms and policy 
 									</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                             </form>
                         </div>
                     </div>
