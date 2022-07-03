@@ -1,3 +1,31 @@
+<?php
+include_once('config.php');
+if(isset($_POST['submit']))
+{
+$userName=$_POST['user_name'];
+$fullName=$_POST['full_name'];
+$age=$_POST['age'];
+$gender=$_POST['gender'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+$password=md5($_POST['password']);
+$group=$_POST['registrationGroup'];
+if($group=="Donor")
+{
+    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
+}
+else if($group=="Recipient")
+{
+    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
+}
+if($query)
+{
+	echo "<script>alert('Successfully Registered. You can login now');</script>";
+	//header('location:user-login.php');
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,20 +71,28 @@
                             <form name="registration" id="registration" method="post">
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input type="email" class="form-control" placeholder="Username" name="user_name" required>
+                                    <input type="text" class="form-control" placeholder="Username" name="user_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Fullname" name="full_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Age</label>
+                                    <input type="number" class="form-control" placeholder="Age" name="age" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Gender</label>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="gender" value="gender1">
+                                        <input type="radio" class="form-check-input" name="gender" value="male">
                                         <label class="from-check-label" for="gender1">Male</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="gender" value="gender2">
+                                        <input type="radio" class="form-check-input" name="gender" value="female">
                                         <label class="from-check-label" for="gender2">Female</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="gender" value="gender3">
+                                        <input type="radio" class="form-check-input" name="gender" value="other">
                                         <label class="from-check-label" for="gender2">Other</label>
                                     </div>
                                 </div>
@@ -77,17 +113,13 @@
                                     <input type="password" class="form-control" placeholder="Repeat Password" name="again_password" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Address</label>
-                                    <textarea class="form-control" cols="80" rows="5" placeholder="Address" name="address" required></textarea>
-                                </div>
-                                <div class="form-group">
                                     <label>Register as</label>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="registrationGroup" value="option1">
+                                        <input type="radio" class="form-check-input" name="registrationGroup" value="Donor">
                                         <label class="from-check-label" for="option1">Donor</label>
                                     </div>
                                     <div class="form-check">
-                                        <input type="radio" class="form-check-input" name="registrationGroup" value="option2">
+                                        <input type="radio" class="form-check-input" name="registrationGroup" value="Recipient">
                                         <label class="from-check-label" for="option1">Recipient</label>
                                     </div>
                                 </div>
