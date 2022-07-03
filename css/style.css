@@ -328,6 +328,15 @@ a:focus {
           transform: translateY(-7px);
 }
 
+.donation_section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.donation {
+  margin-top:40px;
+}
+
+
 .service_section {
   text-align: center;
   color: #f9fcfb;
@@ -715,13 +724,12 @@ a:focus {
 /* end info section */
 /* footer section*/
 .footer_section {
-  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .footer_section p {
@@ -736,5 +744,8 @@ a:focus {
   color: #f9fcfb;
 }
 
+.footer_text{
+  margin-top:auto;
+}
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
