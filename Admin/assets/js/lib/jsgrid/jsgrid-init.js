@@ -16,10 +16,11 @@
                 fields: [
                     { name: "Name", type: "text", width: 150 },
                     { name: "Age", type: "number", width: 50 },
+                    { name: "Gender", type: "text", width: 50 },
                     { name: "Email", type: "text", width: 150 },
-                    { name: "Country", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
-                    { name: "Approved", type: "checkbox", title: "Approved", sorting: false },
+                    { name: "Phone Number", type: "select", items: db.countries, valueField: "Id", textField: "Name" },
                     { name: "Income", type: "number", width:50 },
+                    { name: "Approved", type: "checkbox", title: "Approved", sorting: false },
                     { type: "control" }
                 ]
             });
