@@ -4,23 +4,24 @@ include("include/config.php");
 error_reporting(0);
 if(isset($_POST['submit']))
 {
-$username=mysqli_real_escape_string($con,$_POST['user_name']);
-$password=mysqli_real_escape_string($con,$_POST['password']);
-
-if($username !="" && $password !="")
+$ret=mysqli_query($con,"SELECT * FROM donor WHERE Username='".$_POST['user_name']."' and password='".md5($_POST['password'])."'");
+$num=mysqli_fetch_array($ret);
+if($num>0)
 {
-    $query="SELECT count(*) as cntUser from donor WHERE Username='".$username."'and password='".$password."'";
-    $result=mysqli_query($con,$query);
-    $num=mysqli_fetch_array($result);
-
-    $count=$num['cntUser'];
-
-    if ($count>0){
-        $_SESSION['username'] = $username;
-        header('Location: home.php');
-    }else{
-        echo "Invalid username and password";
-    }
+$extra="home.php";
+$_SESSION['dlogin']=$_POST['user_name'];
+$uip=$_SERVER['REMOTE_ADDR'];
+$host=$_SERVER['HTTP_HOST'];
+$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+//header("location:http://$host$uri/$extra");
+echo "<script>alert('Successfully Logged In');</script>";
+exit();
+}
+else
+{
+echo "<script>alert('Wrong Username Or Password');</script>";
+//header("location:../index.html");
+exit();
 }
 }
 ?>
@@ -66,7 +67,7 @@ if($username !="" && $password !="")
                         </div>
                         <div class="login-form">
                             <h4>Donor Login</h4>
-                            <form action="login.php" name="login" id="login" method="post">
+                            <form name="login" id="login" method="post">
                                 <div class="form-group">
                                     <label>Username</label>
                                     <input type="text" class="form-control" placeholder="Username" name="user_name" required>
