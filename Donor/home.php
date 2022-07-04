@@ -1,3 +1,12 @@
+<?php
+include "config.php";
+
+// Check user login or not
+if(!isset($_SESSION['username'])){
+    header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
