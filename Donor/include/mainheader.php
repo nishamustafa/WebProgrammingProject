@@ -43,13 +43,8 @@
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle">
-                          <?php $query=mysqli_query($con,"select Username from donor where id='".$_SESSION['id']."'");
-                          while($row=mysqli_fetch_array($query))
-                          {
-                            echo $row['Username'];
-                          }
-                          ?>
+                          <span class="bi bi-person-circle"> Hello
+                          <?php echo $SESSION['username']?>
                           </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
