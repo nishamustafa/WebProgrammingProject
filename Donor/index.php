@@ -1,6 +1,32 @@
+<?php
+session_start();
+include("include/config.php");
+error_reporting(0);
+if(isset($_POST['submit']))
+{
+$username=mysqli_real_escape_string($con,$_POST['user_name']);
+$password=mysqli_real_escape_string($con,$_POST['password']);
+
+if($username !="" && $password !="")
+{
+    $query="SELECT count(*) as cntUser from donor WHERE Username='".$username."'and password='".$password."'";
+    $result=mysqli_query($con,$query);
+    $num=mysqli_fetch_array($result);
+
+    $count=$num['cntUser'];
+
+    if ($count>0){
+        $_SESSION['username'] = $username;
+        header('Location: home.php');
+    }else{
+        echo "Invalid username and password";
+    }
+}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,28 +62,28 @@
                 <div class="col-lg-6">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="index.html"><span>Donate4All</span></a>
+                            <a href="../index.html"><span>Donate4All</span></a>
                         </div>
                         <div class="login-form">
                             <h4>Donor Login</h4>
-                            <form>
+                            <form action="login.php" name="login" id="login" method="post">
                                 <div class="form-group">
-                                    <label>Email address</label>
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" placeholder="Username" name="user_name" required>
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" placeholder="Password" name="password" required>
                                 </div>
                                 <div class="checkbox">
                                     <label>
 										<input type="checkbox"> Remember Me
 									</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
                             </form>
                             <div class="register-link m-t-15 text-center">
-                                <p>Don't have account ? <a href="../page-register.html"> Sign Up Here</a></p>
+                                <p>Don't have account ? <a href="../page-register.php"> Sign Up Here</a></p>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <?php
-include_once('config.php');
+include_once('include/config.php');
 if(isset($_POST['submit']))
 {
 $userName=$_POST['user_name'];
@@ -120,7 +120,7 @@ if($query)
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="registrationGroup" value="Recipient">
-                                        <label class="from-check-label" for="option1">Recipient</label>
+                                        <label class="from-check-label" for="Recipient">Recipient</label>
                                     </div>
                                 </div>
                                 <div class="checkbox">
