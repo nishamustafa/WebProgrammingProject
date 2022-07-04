@@ -4,16 +4,20 @@ include("include/config.php");
 error_reporting(0);
 if(isset($_POST['submit']))
 {
-$ret=mysqli_query($con,"SELECT * FROM donor WHERE Username='".$_POST['user_name']."' and password='".md5($_POST['password'])."'");
+$username=$_POST['user_name'];
+$password=md5($_POST['password']);
+$ret=mysqli_query($con,"SELECT * FROM donor WHERE Username='$username' and password='$password'");
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
 $extra="home.php";
 $_SESSION['dlogin']=$_POST['user_name'];
+$_SESSION['id']=$num['id'];
+$_SESSION['username']=$num['username'];
 $uip=$_SERVER['REMOTE_ADDR'];
 $host=$_SERVER['HTTP_HOST'];
 $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-//header("location:http://$host$uri/$extra");
+header("location:http://$host$uri/$extra");
 echo "<script>alert('Successfully Logged In');</script>";
 exit();
 }
