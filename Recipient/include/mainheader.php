@@ -3,7 +3,7 @@
           <div class="row">
             <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="home.php">
                   <span> Donate4All </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -37,7 +37,7 @@
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle"> Iman</span>
+                          <span class="bi bi-person-circle"> </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                           <li class="dropdown-item">
