@@ -1,11 +1,9 @@
-
-<!-- header section strats -->
 <header class="header_section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
               <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                   <span> Donate4All </span>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -28,12 +26,8 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li class="dropdown-item">
-                            <a class="nav-link" href="donationpage.php">
-                              Donation Listing</a>
-                          </li>
-                          <li class="dropdown-item">
                             <a class="nav-link" href="#">
-                              Add Donation</a>
+                              Request Donation</a>
                           </li>
                         </ul>
                       </li>
@@ -43,9 +37,7 @@
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle"> Hello
-                          <?php echo $_SESSION['username']?>
-                          </span>
+                          <span class="bi bi-person-circle"> Iman</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                           <li class="dropdown-item">
@@ -70,4 +62,3 @@
           </div>
         </div>
       </header>
-      <!-- end header section -->
