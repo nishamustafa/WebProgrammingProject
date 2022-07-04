@@ -1,10 +1,9 @@
 <?php
-include "config.php";
-
-// Check user login or not
-if(!isset($_SESSION['username'])){
-    header('Location: index.php');
-}
+session_start();
+error_reporting(0);
+include('include/config.php');
+include('include/checklogin.php');
+check_login();
 ?>
 
 <!DOCTYPE html>
