@@ -77,7 +77,7 @@ include('include/config.php');
                                 </div>
                                 <div class="bootstrap-data-table-panel">
                                     <div class="table-responsive">
-                                        <table class="display table table-borderd table-hover">
+                                        <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
                                                     <th>ID</th>
@@ -105,7 +105,6 @@ include('include/config.php');
                                                     <td><?php echo $array[4];?></td>
                                                     <td><?php echo $array[5];?></td>
                                                     <td><?php echo $array[6];?></td>
-                                                    <td><?php echo $array[7];?></td>
                                                  </tr>
                                                 <?php endwhile; ?>
                                                 <?php else: ?>
@@ -120,11 +119,8 @@ include('include/config.php');
                                     </div>
                                 </div>
                             </div>
-                            <!-- /# card -->
                         </div>
-                        <!-- /# column -->
                     </div>
-                    <!-- /# row -->
 
                     <div class="row">
                         <div class="col-lg-12"> 
@@ -135,8 +131,6 @@ include('include/config.php');
             </div>
         </div>
     </div>
-
-
 
     
     <!-- jquery vendor -->
