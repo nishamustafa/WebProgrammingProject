@@ -50,7 +50,7 @@
                     }
                 },
                 fields: [
-                    { name: "ID", type: "text", width: 50 },
+                    { name: "ID", type: "number", width: 50 },
                     { name: "Recipient Name", type: "text", width: 150 },
                     { name: "Description", type: "text", width: 150 },
                     { name: "Status", type: "text", width: 50 },
