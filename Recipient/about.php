@@ -1,3 +1,11 @@
+<?php
+session_start();
+error_reporting(0);
+include('include/config.php');
+include('include/checklogin.php');
+check_login();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -60,7 +68,7 @@
       <!-- footer section -->
       <section class="container-fluid footer_section">
         <p>
-          © 2019 All Rights Reserved By
+          © 2022 All Rights Reserved By
           <a href="https://html.design/">Free Html Templates</a>
         </p>
       </section>
