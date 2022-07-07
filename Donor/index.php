@@ -12,8 +12,7 @@ if($num>0)
 {
 $extra="home.php";
 $_SESSION['dlogin']=$_POST['user_name'];
-$_SESSION['id']=$num['id'];
-$_SESSION['username']=$num['username'];
+$_SESSION['id']=$num['donorID'];
 $uip=$_SERVER['REMOTE_ADDR'];
 $host=$_SERVER['HTTP_HOST'];
 $uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
