@@ -45,10 +45,6 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                           <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              User Dashboard</a>
-                          </li>
-                          <li class="dropdown-item">
                             <a class="nav-link" href="donorprofile.html">
                               User Profile</a>
                           </li>

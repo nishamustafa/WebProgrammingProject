@@ -24,7 +24,7 @@
                       </a>
                     </li>
                     <li class="dropdown-item">
-                      <a href="#">
+                      <a href="logout.php">
                         <i class="ti-power-off"></i>
                         <span>Logout</span>
                       </a>
