@@ -82,13 +82,13 @@ check_login();
                                         <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
+                                                    <th>Donation ID</th>
+                                                    <th>Donor ID</th>
+                                                    <th>Request ID</th>
                                                     <th>Amount</th>
                                                     <th>Description</th>
                                                     <th>Status</th>
-                                                    <th>Donor Name</th>
                                                     <th>Donation Date</th>
-                                                    <th>Received Date</th>
                                                 </tr>
                                             </thead>
 
