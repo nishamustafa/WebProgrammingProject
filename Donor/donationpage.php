@@ -79,7 +79,7 @@ check_login();
                             <p>Lorem ipsum, or lipsum as it is 
                                 sometimes known, is dummy 
                                 text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
+                            <a href="donation1.php" class="read_more">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ check_login();
                             <p>Lorem ipsum, or lipsum as it is 
                                 sometimes known, is dummy 
                                 text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
+                            <a href="donation2.php" class="read_more">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ check_login();
                             <p>Lorem ipsum, or lipsum as it is 
                                 sometimes known, is dummy 
                                 text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
+                            <a href="donation3.php" class="read_more">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ check_login();
         <div class="text-center footer_text">
             <p>
                 © 2022 All Rights Reserved By
-                <a href="https://html.design/">Donate4All</a>
+                <a href="home.php">Donate4All</a>
             </p>
         </div>
     </section>

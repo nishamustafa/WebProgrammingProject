@@ -2,6 +2,8 @@
 session_start();
 error_reporting(0);
 include('include/config.php');
+include('include/checklogin.php');
+check_login();
 ?>
 
 <!DOCTYPE html>
@@ -80,8 +82,11 @@ include('include/config.php');
                                         <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
+                                                    <th>Request ID</th>
+                                                    <th>Recipient ID</th>
+                                                    <th>Title</th>
                                                     <th>Description</th>
+                                                    <th>Goal</th>
                                                     <th>Status</th>
                                                     <th>Request Date</th>
                                                 </tr>
@@ -99,6 +104,9 @@ include('include/config.php');
                                                             <td><?php echo $array[1]; ?></td>
                                                             <td><?php echo $array[2]; ?></td>
                                                             <td><?php echo $array[3]; ?></td>
+                                                            <td><?php echo $array[4]; ?></td>
+                                                            <td><?php echo $array[5]; ?></td>
+                                                            <td><?php echo $array[6]; ?></td>
                                                         </tr>
                                                     <?php endwhile; ?>
                                                 <?php else : ?>

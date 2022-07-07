@@ -121,7 +121,7 @@ check_login();
         <div class="text-center footer_text">
             <p>
                 © 2022 All Rights Reserved By
-                <a href="https://html.design/">Donate4All</a>
+                <a href="home.php">Donate4All</a>
             </p>
         </div>
     </section>

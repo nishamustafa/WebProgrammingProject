@@ -2,6 +2,8 @@
 session_start();
 error_reporting(0);
 include('include/config.php');
+include('include/checklogin.php');
+check_login();
 ?>
 
 <!DOCTYPE html>
@@ -80,13 +82,13 @@ include('include/config.php');
                                         <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>ID</th>
+                                                    <th>Donation ID</th>
+                                                    <th>Donor ID</th>
+                                                    <th>Request ID</th>
                                                     <th>Amount</th>
                                                     <th>Description</th>
                                                     <th>Status</th>
-                                                    <th>Donor Name</th>
                                                     <th>Donation Date</th>
-                                                    <th>Received Date</th>
                                                 </tr>
                                             </thead>
 

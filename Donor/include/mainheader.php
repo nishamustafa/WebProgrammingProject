@@ -33,7 +33,7 @@
                           </li>
                           <li class="dropdown-item">
                             <a class="nav-link" href="#">
-                              Add Donation</a>
+                              Donation History</a>
                           </li>
                         </ul>
                       </li>
