@@ -1,30 +1,19 @@
 <?php
 session_start();
 include("include/config.php");
-error_reporting(0);
 if(isset($_POST['submit']))
 {
 $username=$_POST['user_name'];
-$password=md5($_POST['password']);
-$ret=mysqli_query($con,"SELECT * FROM recipient WHERE Username='$username' and password='$password'");
-$num=mysqli_fetch_array($ret);
-if($num>0)
-{
-$extra="home.php";
-$_SESSION['dlogin']=$_POST['user_name'];
-$_SESSION['id']=$num['recipientID'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-echo "<script>alert('Successfully Logged In');</script>";
-exit();
-}
-else
-{
-echo "<script>alert('Wrong Username Or Password');</script>";
-echo "<script>window.location.href ='../index.html'</script>";
-exit();
+$email=$_POST['email'];
+$query=mysqli_query($con,"select donorID from donor where username='$username' and email='$email'");
+$row=mysqli_num_rows($query);
+if($row>0){
+    $_SESSION['username']=$username;
+    $_SESSION['email']=$email;
+    header('location:reset-password.php');
+}else {
+    echo "<script>alert('Invalid details. Please try with valid details');</script>";
+    echo "<script>window.location.href ='forgot-password.php'</script>";    
 }
 }
 ?>
@@ -36,7 +25,7 @@ exit();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Donate4All Recipient Login</title>
+    <title>Donate4All Password Reset</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -69,26 +58,17 @@ exit();
                             <a href="../index.html"><span>Donate4All</span></a>
                         </div>
                         <div class="login-form">
-                            <h4>Recipient Login</h4>
-                            <form name="login" id="login" method="post">
+                            <h4>Recipient Password Recovery</h4>
+                            <form name="reset" id="reset" method="post">
                                 <div class="form-group">
                                     <label>Username</label>
                                     <input type="text" class="form-control" placeholder="Username" name="user_name" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" name="password" required>
-                                    <i class="fa fa-lock"></i>
-									 </span><a href="forgot-password.php">
-									Forgot Password ?
-								</a>
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Email" name="email" required>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-										<input type="checkbox"> Remember Me
-									</label>
-                                </div>
-                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Sign in</button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Proceed</button>
                             </form>
                             <div class="register-link m-t-15 text-center">
                                 <p>Don't have account ? <a href="../page-register.php"> Sign Up Here</a></p>
