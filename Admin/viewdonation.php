@@ -105,7 +105,10 @@ check_login();
                                                     <td><?php echo $array[2];?></td>
                                                     <td><?php echo $array[3];?></td>
                                                     <td><?php echo $array[4];?></td>
-                                                    <td><?php echo $array[5];?></td>
+                                                    <td><?php if($array[5]==1)
+                                                            echo "Approved";
+                                                            else
+                                                            echo "Not Approved";?></td>
                                                     <td><?php echo $array[6];?></td>
                                                  </tr>
                                                 <?php endwhile; ?>

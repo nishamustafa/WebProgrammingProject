@@ -14,7 +14,7 @@ check_login();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Admin View Request</title>
+    <title>Admin View Donor</title>
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
@@ -61,7 +61,7 @@ check_login();
                             <div class="page-title">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="admindashboard.php">Dashboard</a></li>
-                                    <li class="breadcrumb-item active">View Request</li>
+                                    <li class="breadcrumb-item active">View Donor</li>
                                 </ol>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ check_login();
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-title">
-                                    <h4>Request Data Table </h4>
+                                    <h4>Donors Data Table </h4>
 
                                 </div>
                                 <div class="bootstrap-data-table-panel">
@@ -82,18 +82,18 @@ check_login();
                                         <table id="row-select" class="display table table-borderd table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Request ID</th>
-                                                    <th>Recipient ID</th>
-                                                    <th>Title</th>
-                                                    <th>Description</th>
-                                                    <th>Goal</th>
-                                                    <th>Status</th>
-                                                    <th>Request Date</th>
+                                                    <th>Donor ID</th>
+                                                    <th>User Name</th>
+                                                    <th>Name</th>
+                                                    <th>Gender</th>
+                                                    <th>Age</th>
+                                                    <th>Email</th>
+                                                    <th>Phone Number</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
-                                                <?php include 'include/retrieverequest.php'; ?>
+                                                <?php include 'include/retrievedonor.php'; ?>
 
                                                 <?php if ($result->num_rows > 0) : ?>
 
@@ -105,11 +105,7 @@ check_login();
                                                             <td><?php echo $array[2]; ?></td>
                                                             <td><?php echo $array[3]; ?></td>
                                                             <td><?php echo $array[4]; ?></td>
-                                                            <td><?php 
-                                                            if($array[5]==1)
-                                                            echo "Approved";
-                                                            else
-                                                            echo "Not Approved"; ?></td>
+                                                            <td><?php echo $array[5]; ?></td>
                                                             <td><?php echo $array[6]; ?></td>
                                                         </tr>
                                                     <?php endwhile; ?>
@@ -165,15 +161,6 @@ check_login();
     <script src="assets/js/lib/data-table/buttons.print.min.js"></script>
     <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
     <script src="assets/js/lib/data-table/datatables-init.js"></script>
-
-
-
-
-
-
-
-
-
 
 </body>
 
