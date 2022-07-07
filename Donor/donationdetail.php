@@ -12,7 +12,7 @@ if (isset($_POST['donate'])) {
   //$num=mysqli_fetch_array($query);
   //$reqID=$num['requestID'];
   $amount = $_POST['radio-group'];
-  $status = 1;
+  $status = 0;
 
   $query = mysqli_query($con, "insert into donation(donor_fk,request_fk,Amount,Status) values ('$donorID','$pid','$amount','$status')");
   if ($query) {
