@@ -74,9 +74,6 @@ check_login();
             <li data-target="#carouselExampleIndicators" data-slide-to="1">
               02
             </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2">
-              03
-            </li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -85,14 +82,14 @@ check_login();
                   <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
-                        Example <br />
-                        Slider 1 <br />
-                        Of Our Donation
+                        What is Donate4All? <br/>
                       </h1>
                       <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
+                        Donate4All is an online donation platform created to aid
+                        the ones affected since the COVID-19 pandemic first
+                        occured in Malaysia. This platform gives you effective
+                        access to donate and receive donations with a simple
+                        click of a button!
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn-1"> Read More </a>
@@ -101,7 +98,7 @@ check_login();
                   </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="images/slider.gif" alt="" />
                     </div>
                   </div>
                 </div>
@@ -113,14 +110,14 @@ check_login();
                   <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
-                        Example <br />
-                        Slider 2 <br />
-                        Of Our Donation
+                        How do you contribute <br/>
+                        to Donate4All? <br/>
                       </h1>
                       <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
+                        Simply sign up for a Donate4All account to be walked through
+                        the fundamental processes of donating and receiving donations.
+                        With easy clicks of the mouse and forms, you will be navigated
+                        through the pages to deliver your needs!
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn-1"> Read More </a>
@@ -129,41 +126,12 @@ check_login();
                   </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="images/slider.gif" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-5 col-md-6">
-                    <div class="slider_detail-box">
-                      <h1>
-                        Example <br />
-                        Slider 3 <br />
-                        Of Our Donation
-                      </h1>
-                      <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
-                      </p>
-                      <div class="btn-box">
-                        <a href="" class="btn-1"> Read More </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="carousel_btn-container">
             <a
               class="carousel-control-prev"
@@ -187,7 +155,46 @@ check_login();
       <!-- end slider section -->
     </div>
 
+<<<<<<< HEAD:Donor/home.php
     <?php include('include/mainwelcome.php');?>
+=======
+    <!-- welcome section -->
+    <section class="welcome_section layout_padding">
+      <div class="container">
+        <div class="custom_heading-container">
+          <h2>Welcome To Donate 4 All</h2>
+        </div>
+        <div class="layout_padding2">
+          <div class="img-box">
+            <img src="images/welcome.jpg" alt="" />
+          </div>
+          <div class="detail-box">
+            <p>
+              A survey conducted by United Nations agencies UNICEF and
+              UNFPA in the near end of 2020, when Malaysia underwent the conditional movement control order (CMCO), it is found that
+              the socio-economic state of an approximate half of the Malaysian
+              households were gradually deteriorating due to them nearing their
+              breaking points. These surveys have found that unemployment in
+              the country has doubled up to 15% when compared to three months
+              prior the occurence, where one-third of a household remains
+              unemployed. <br/><br/>
+
+              Due to the current state of unemployment and loss of jobs of the
+              public since COVID-19 occured, Donate4All takes the advantage
+              to help the families and those who are in need in a rough time.
+              Donate4All serves as a platform for users to donate money and
+              items as per needed by families who could not afford, as well as
+              a platform for those who requires aid to afford basic necessities.
+            </p>
+            <div>
+              <a href=""> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end welcome section -->
+>>>>>>> 9d4423f5ca1bc36b025215b3d6499a8fb92bda2c:Donor/home.html
 
     <div class="footer_bg">
       <!-- footer section -->

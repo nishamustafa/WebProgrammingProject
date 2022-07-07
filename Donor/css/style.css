@@ -46,9 +46,9 @@ body {
 /*header section*/
 .hero_area {
   height: 94vh;
-  background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
-  background: linear-gradient(to right, #864ddf, #203376);
-}
+  background: -webkit-gradient(linear, left top, right top, from(#53586B), to#2B3044));
+  background: linear-gradient(to right, #53586B, #2B3044);
+} 
 
 .hero_area::before {
   content: "";
@@ -118,7 +118,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  background-image: url(../images/donate4all.png);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -159,10 +159,10 @@ a:focus {
   background-size: 40px;
 }
 .dropdown-menu{
-  background-color: #252525;
+  background-color: #334950;
 }
 .dropdown-item:hover{
-  background:#864ddf;
+  background:#feb543;
 }
 
 /*end header section*/
@@ -217,7 +217,7 @@ a:focus {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
-  background-color: #383a90;
+  background-color: #334950;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -250,7 +250,7 @@ a:focus {
   text-align: center;
   line-height: 55px;
   color: #f9fcfb;
-  background-color: #547bfe;
+  background-color: #334950;
   opacity: 1;
   display: none;
 }
@@ -267,7 +267,7 @@ a:focus {
 .slider_detail-box .btn-box a {
   display: inline-block;
   padding: 12px 40px;
-  background-color: #feb543;
+  background-color: #F7BF10;
   color: #f9fcfb;
   border-radius: 25px;
   -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
@@ -284,12 +284,12 @@ a:focus {
 }
 
 .slider_img-box {
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 }
 
 .slider_img-box img {
-  width: 100%;
+  width: 120%;
 }
 
 .welcome_section {
@@ -297,12 +297,12 @@ a:focus {
 }
 
 .welcome_section .img-box {
-  width: 65%;
+  width: 50%;
   margin: 0 auto;
 }
 
 .welcome_section .img-box img {
-  width: 100%;
+  width: 80%;
 }
 
 .welcome_section .detail-box {
@@ -312,7 +312,7 @@ a:focus {
 .welcome_section .detail-box a {
   display: inline-block;
   padding: 12px 40px;
-  background-color: #feb543;
+  background-color: #F7BF10;
   color: #f9fcfb;
   border-radius: 25px;
   -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
@@ -486,7 +486,7 @@ a:focus {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
-  background-color: #383a90;
+  background-color: #334950;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
