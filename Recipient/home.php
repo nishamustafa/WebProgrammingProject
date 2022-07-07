@@ -1,3 +1,11 @@
+<?php
+session_start();
+error_reporting(0);
+include('include/config.php');
+include('include/checklogin.php');
+check_login();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -48,62 +56,7 @@
   <body>
     <div class="hero_area">
       <!-- header section strats -->
-      <header class="header_section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="index.html">
-                  <span> Donate4All </span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-      
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <div class="d-flex flex-column flex-lg-row align-items-center">
-                    <ul class="navbar-nav">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About </a>
-                      </li>
-                      <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          Donations
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              Request Donation</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="d-flex flex-column flex-lg-row align-items-center ml-auto">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle"> Iman</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              User Dashboard</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
+      <?php include('include/mainheader.php');?>
       <!-- end header section -->
       <!-- slider section -->
       <section class="slider_section">
@@ -237,30 +190,7 @@
     </div>
 
     <!-- welcome section -->
-    <section class="welcome_section layout_padding">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h2>Welcome To Our Website</h2>
-        </div>
-        <div class="layout_padding2">
-          <div class="img-box">
-            <img src="images/welcome.png" alt="" />
-          </div>
-          <div class="detail-box">
-            <p>
-              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-              voluptate velit esse cillum dolore eu
-            </p>
-            <div>
-              <a href=""> Read More </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <?php include('include/mainwelcome.php');?>
     <!-- end welcome section -->
 
     <div class="footer_bg">
@@ -268,7 +198,7 @@
       <section class="container-fluid footer_section">
         <p>
           © 2022 All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
+          <a href="home.php">Donate4All</a>
         </p>
       </section>
       <!-- footer section -->

@@ -1,3 +1,11 @@
+<?php
+session_start();
+error_reporting(0);
+include('include/config.php');
+include('include/checklogin.php');
+check_login();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,76 +55,7 @@
 
   <body>
     <div class="hero_area">
-      <!-- header section strats -->
-      <header class="header_section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <nav class="navbar navbar-expand-lg custom_nav-container">
-                <a class="navbar-brand" href="#">
-                  <img src="../images/donate4all.png" height="70px" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-      
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <div class="d-flex flex-column flex-lg-row align-items-center">
-                    <ul class="navbar-nav">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About </a>
-                      </li>
-                      <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          Donations
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="donationpage.html">
-                              Donation Listing</a>
-                          </li>
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              Add Donation</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="d-flex flex-column flex-lg-row align-items-center ml-auto">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle"> Shahril</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              User Dashboard</a>
-                          </li>
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="donorprofile.html">
-                              User Profile</a>
-                          </li>
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="../index.html">
-                              <span class="bi bi-box-arrow-in-left"></span> Logout</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- end header section -->
+    <?php include('include/mainheader.php');?>
       <!-- slider section -->
       <section class="slider_section">
         <div
@@ -216,42 +155,7 @@
       <!-- end slider section -->
     </div>
 
-    <!-- welcome section -->
-    <section class="welcome_section layout_padding">
-      <div class="container">
-        <div class="custom_heading-container">
-          <h2>Welcome To Donate 4 All</h2>
-        </div>
-        <div class="layout_padding2">
-          <div class="img-box">
-            <img src="images/welcome.jpg" alt="" />
-          </div>
-          <div class="detail-box">
-            <p>
-              A survey conducted by United Nations agencies UNICEF and
-              UNFPA in the near end of 2020, when Malaysia underwent the conditional movement control order (CMCO), it is found that
-              the socio-economic state of an approximate half of the Malaysian
-              households were gradually deteriorating due to them nearing their
-              breaking points. These surveys have found that unemployment in
-              the country has doubled up to 15% when compared to three months
-              prior the occurence, where one-third of a household remains
-              unemployed. <br/><br/>
-
-              Due to the current state of unemployment and loss of jobs of the
-              public since COVID-19 occured, Donate4All takes the advantage
-              to help the families and those who are in need in a rough time.
-              Donate4All serves as a platform for users to donate money and
-              items as per needed by families who could not afford, as well as
-              a platform for those who requires aid to afford basic necessities.
-            </p>
-            <div>
-              <a href=""> Read More </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end welcome section -->
+    <?php include('include/mainwelcome.php');?>
 
     <div class="footer_bg">
       <!-- footer section -->
@@ -259,7 +163,7 @@
         <div class="text-center footer_text">
           <p>
               © 2022 All Rights Reserved By
-              <a href="https://html.design/">Donate4All</a>
+              <a href="home.php">Donate4All</a>
           </p>
       </div>
       </section>

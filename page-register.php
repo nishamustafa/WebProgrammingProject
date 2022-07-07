@@ -1,28 +1,23 @@
 <?php
-include_once('config.php');
-if(isset($_POST['submit']))
-{
-$userName=$_POST['user_name'];
-$fullName=$_POST['full_name'];
-$age=$_POST['age'];
-$gender=$_POST['gender'];
-$email=$_POST['email'];
-$phone=$_POST['phone'];
-$password=md5($_POST['password']);
-$group=$_POST['registrationGroup'];
-if($group=="Donor")
-{
-    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
-}
-else if($group=="Recipient")
-{
-    $query=mysqli_query($con,"insert into donor(Username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email',$phone')");
-}
-if($query)
-{
-	echo "<script>alert('Successfully Registered. You can login now');</script>";
-	//header('location:user-login.php');
-}
+include_once('include/config.php');
+if (isset($_POST['submit'])) {
+    $userName = $_POST['user_name'];
+    $fullName = $_POST['full_name'];
+    $age = $_POST['age'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone_num'];
+    $password = md5($_POST['password']);
+    $group = $_POST['registrationGroup'];
+    if ($group == "Donor") {
+        $query = mysqli_query($con, "insert into donor(username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email','$phone')");
+    } else if ($group == "Recipient") {
+        $query = mysqli_query($con, "insert into recipient(username,password,name,gender,age,email,phoneNumber) values('$userName','$password','$fullName','$gender','$age','$email','$phone')");
+    }
+    if ($query) {
+        echo "<script>alert('Successfully Registered. You can login now');</script>";
+        echo "<script>window.location.href ='../index.html'</script>";
+    }
 }
 ?>
 
@@ -54,6 +49,17 @@ if($query)
     <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/lib/helper.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        function valid() {
+            if (document.registration.password.value != document.registration.again_password.value) {
+                alert("Password and Confirm Password Field do not match  !!");
+                document.registration.again_password.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 
 <body class="bg-primary">
@@ -68,7 +74,7 @@ if($query)
                         </div>
                         <div class="login-form">
                             <h4>Registration</h4>
-                            <form name="registration" id="registration" method="post">
+                            <form name="registration" id="registration" method="post" onSubmit="return valid();">
                                 <div class="form-group">
                                     <label>Username</label>
                                     <input type="text" class="form-control" placeholder="Username" name="user_name" required>
@@ -85,23 +91,24 @@ if($query)
                                     <label>Gender</label>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="male">
-                                        <label class="from-check-label" for="gender1">Male</label>
+                                        <label class="from-check-label" for="male">Male</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="female">
-                                        <label class="from-check-label" for="gender2">Female</label>
+                                        <label class="from-check-label" for="female">Female</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="gender" value="other">
-                                        <label class="from-check-label" for="gender2">Other</label>
+                                        <label class="from-check-label" for="other">Other</label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Email address</label>
-                                    <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                    <input type="email" class="form-control" placeholder="Email" name="email" id="email" onkeydown="validation()" required>
+                                    <span id="textforemail"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label>Phone :</label>  
+                                    <label>Phone :</label>
                                     <input type="text" class="form-control" placeholder="Phone" size="10" name="phone_num" required>
                                 </div>
                                 <div class="form-group">
@@ -111,24 +118,25 @@ if($query)
                                 <div class="form-group">
                                     <label>Repeat Password</label>
                                     <input type="password" class="form-control" placeholder="Repeat Password" name="again_password" required>
+                                    <span id="message"></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Register as</label>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="registrationGroup" value="Donor">
-                                        <label class="from-check-label" for="option1">Donor</label>
+                                        <label class="from-check-label" for="Donor">Donor</label>
                                     </div>
                                     <div class="form-check">
                                         <input type="radio" class="form-check-input" name="registrationGroup" value="Recipient">
-                                        <label class="from-check-label" for="option1">Recipient</label>
+                                        <label class="from-check-label" for="Recipient">Recipient</label>
                                     </div>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-										<input type="checkbox"> Agree the terms and policy 
-									</label>
+                                        <input type="checkbox"> Agree the terms and policy
+                                    </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                             </form>
                         </div>
                     </div>
@@ -136,7 +144,26 @@ if($query)
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function validation() {
+            var form = document.getElementById("registration");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("textforemail");
+            var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+            if (email.match(pattern)) {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML = "Email Address is Valid";
+                text.style.color = "#00ff00";
+            } else {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+                text.innerHTML = "Email Address is Invalid";
+                text.style.color = "#ff0000";
+            }
+        }
+    </script>
 </body>
 
 </html>

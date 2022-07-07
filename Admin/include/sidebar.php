@@ -17,6 +17,13 @@
                         </ul>
                     </li>
                     <li><a href="viewdonation.php"><i class="ti-money"></i> View Donation </a></li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-user"></i>View Users <span
+                                class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="viewdonor.php"><i class="ti-eye"></i>View Donor</a></li>
+                            <li><a href="viewrecipient.php"><i class="ti-eye"></i>View Recipient</a></li>
+                        </ul>
+                    </li>
                 </ul>  
             </div>
         </div>

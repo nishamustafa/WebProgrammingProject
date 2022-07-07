@@ -2,6 +2,8 @@
 session_start();
 error_reporting(0);
 include('include/config.php');
+include('include/checklogin.php');
+check_login();
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +82,7 @@ include('include/config.php');
                     <div class="row">
                       <div class="col-lg-4">
                         <div class="user-photo m-b-30">
-                          <img class="img-fluid" src="assets/images/user-profile.jpg" alt="" />
+                          <img class="img-fluid" src="images/user-profile.jpg" alt=""/>
                         </div>
                       </div>
                       <div class="col-lg-8">

@@ -2,6 +2,8 @@
 session_start();
 error_reporting(0);
 include('include/config.php');
+include('include/checklogin.php');
+check_login();
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +100,14 @@ include('include/config.php');
                     </div>
                     <div class="stat-content dib">
                       <div class="stat-text">Total Donation</div>
-                      <div class="stat-digit">1,012</div>
+                      <div class="stat-digit">
+                      <?php $sql= mysqli_query($con,"SELECT SUM(Amount) AS value_sum FROM donation");
+                        $row = mysqli_fetch_assoc($sql); 
+                        $sum = $row['value_sum'];
+{
+?>
+											RM<?php echo htmlentities($sum);  } ?>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -111,7 +120,16 @@ include('include/config.php');
                     </div>
                     <div class="stat-content dib">
                       <div class="stat-text">Total User</div>
-                      <div class="stat-digit">961</div>
+                      <div class="stat-digit">
+                      <?php $sql1= mysqli_query($con,"SELECT * FROM donor");
+                            $sql2= mysqli_query($con,"SELECT * FROM recipient");
+                            $num_rows1 = mysqli_num_rows($sql1);
+                            $num_rows2 = mysqli_num_rows($sql2);
+                            $rows1 = $num_rows1 + $num_rows2;
+{
+?>
+											<?php echo htmlentities($rows1);  } ?>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -124,7 +142,13 @@ include('include/config.php');
                     </div>
                     <div class="stat-content dib">
                       <div class="stat-text">Total Request</div>
-                      <div class="stat-digit">770</div>
+                      <div class="stat-digit">
+                      <?php $sql3= mysqli_query($con,"SELECT * FROM request");
+                        $row3 = mysqli_num_rows($sql3); 
+{
+?>
+											<?php echo htmlentities($row3);  } ?>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,7 +161,13 @@ include('include/config.php');
                     </div>
                     <div class="stat-content dib">
                       <div class="stat-text">Approved Donation</div>
-                      <div class="stat-digit">2,781</div>
+                      <div class="stat-digit">
+                      <?php $sql4= mysqli_query($con,"SELECT * FROM donation WHERE status='Approved'");
+                        $row4 = mysqli_num_rows($sql4); 
+{
+?>
+											<?php echo htmlentities($row4);  } ?>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -152,7 +182,13 @@ include('include/config.php');
                       <i class="ti-user"></i>
                     </div>
                     <div class="stat-content">
-                      <div class="stat-digit">123</div>
+                      <div class="stat-digit">
+                      <?php $sql5= mysqli_query($con,"SELECT * FROM donor");
+                        $row5 = mysqli_num_rows($sql5); 
+{
+?>
+											<?php echo htmlentities($row5);  } ?>
+                      </div>
                       <div class="stat-text">Donor</div>
                     </div>
                   </div>
@@ -165,7 +201,13 @@ include('include/config.php');
                       <i class="ti-user"></i>
                     </div>
                     <div class="stat-content">
-                      <div class="stat-digit">123</div>
+                      <div class="stat-digit">
+                      <?php $sql6= mysqli_query($con,"SELECT * FROM recipient");
+                        $row6 = mysqli_num_rows($sql6); 
+{
+?>
+											<?php echo htmlentities($row6);  } ?>
+                      </div>
                       <div class="stat-text">Recipient</div>
                     </div>
                   </div>
