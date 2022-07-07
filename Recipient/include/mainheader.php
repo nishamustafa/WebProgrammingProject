@@ -41,11 +41,13 @@
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown ">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                          <span class="bi bi-person-circle"> </span>
+                          <span class="bi bi-person-circle">
+                            <?php echo $_SESSION['dlogin']?>
+                          </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                           <li class="dropdown-item">
-                            <a class="nav-link" href="donorprofile.html">
+                            <a class="nav-link" href="editprofile.php">
                               User Profile</a>
                           </li>
                           <li class="dropdown-item">
