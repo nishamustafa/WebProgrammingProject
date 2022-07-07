@@ -198,7 +198,7 @@ check_login();
       <section class="container-fluid footer_section">
         <p>
           © 2022 All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a>
+          <a href="home.php">Donate4All</a>
         </p>
       </section>
       <!-- footer section -->

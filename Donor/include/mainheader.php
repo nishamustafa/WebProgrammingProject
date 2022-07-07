@@ -33,7 +33,7 @@
                           </li>
                           <li class="dropdown-item">
                             <a class="nav-link" href="#">
-                              Add Donation</a>
+                              Donation History</a>
                           </li>
                         </ul>
                       </li>
@@ -49,11 +49,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                           <li class="dropdown-item">
-                            <a class="nav-link" href="#">
-                              User Dashboard</a>
-                          </li>
-                          <li class="dropdown-item">
-                            <a class="nav-link" href="donorprofile.html">
+                            <a class="nav-link" href="donorprofile.php">
                               User Profile</a>
                           </li>
                           <li class="dropdown-item">
