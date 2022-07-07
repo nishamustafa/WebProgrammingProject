@@ -20,6 +20,9 @@ if(isset($_POST['submit']))
     {
         echo "<script>alert('Request Success. Wait for status');</script>";
         move_uploaded_file($tempimage, $folder);
+    }else{
+        echo "<script>alert('Request error, try again.');</script>";
+        echo "<script>window.location.href ='requestdonation.php'</script>";
     }
 }
 ?>
@@ -81,7 +84,7 @@ if(isset($_POST['submit']))
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input type="text" class="form-control" placeholder="Description" name="description" required>
+                                        <textarea class="form-control" name="description" rows="4" cols="50" placeholder="Description"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Goal</label>
