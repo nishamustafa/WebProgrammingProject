@@ -25,8 +25,12 @@
                           Donations
                         </a>
                         <ul class="dropdown-menu">
+                        <li class="dropdown-item">
+                            <a class="nav-link" href="donationpage.php">
+                              Donation Listing</a>
+                          </li>
                           <li class="dropdown-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="requestdonation.php">
                               Request Donation</a>
                           </li>
                         </ul>
