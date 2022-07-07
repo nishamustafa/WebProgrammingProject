@@ -46,8 +46,8 @@ body {
 /*header section*/
 .hero_area {
   height: 94vh;
-  background: -webkit-gradient(linear, left top, right top, from(#864ddf), to(#203376));
-  background: linear-gradient(to right, #864ddf, #203376);
+  background: -webkit-gradient(linear, left top, right top, from #53586B), to(#2B3044));
+  background: linear-gradient(to right, #53586B, #2B3044);
 }
 
 .hero_area::before {
@@ -224,7 +224,7 @@ a:focus {
 
 .slider_section .carousel_btn-container .carousel-control-prev:hover,
 .slider_section .carousel_btn-container .carousel-control-next:hover {
-  background-color: #feb543;
+  background-color: #1F1B28;
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev {

@@ -23,7 +23,7 @@ exit();
 else
 {
 echo "<script>alert('Wrong Username Or Password');</script>";
-//header("location:../index.html");
+echo "<script>window.location.href ='../index.html'</script>";
 exit();
 }
 }
@@ -78,6 +78,10 @@ exit();
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input type="password" class="form-control" placeholder="Password" name="password" required>
+                                    <i class="fa fa-lock"></i>
+									 </span><a href="forgot-password.php">
+									Forgot Password ?
+								</a>
                                 </div>
                                 <div class="checkbox">
                                     <label>

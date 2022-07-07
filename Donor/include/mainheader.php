@@ -53,6 +53,10 @@
                               User Profile</a>
                           </li>
                           <li class="dropdown-item">
+                            <a class="nav-link" href="change-password.php">
+                              Change Password</a>
+                          </li>
+                          <li class="dropdown-item">
                             <a class="nav-link" href="logout.php">
                               <span class="bi bi-box-arrow-in-left"></span> Logout</a>
                           </li>

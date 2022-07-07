@@ -7,7 +7,7 @@ check_login();
 
 if(isset($_POST['submit']))
 {
-  $pid = intval($_GET['pid']);
+    $pid = intval($_GET['pid']);
     $title=$_POST['title'];
     $description=$_POST['description'];
     $goal=$_POST['goal'];
@@ -101,7 +101,7 @@ if(isset($_POST['submit']))
                     $cnt = 1;
                             while($data=mysqli_fetch_array($sql)){
                             ?>
-                      <form style="margin-top: 20px;">
+                      <form style="margin-top: 20px;" method="post">
                         <div class="form-group">
                           <p class="text m-b-15 f-s-17">
                             Title</p>

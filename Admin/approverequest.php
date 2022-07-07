@@ -4,16 +4,12 @@ error_reporting(0);
 include_once('include/config.php');
 include_once('include/checklogin.php');
 check_login();
-if (strlen($_SESSION['aid'] == 0)) {
-    header('location:logout.php');
-} else {
 if ($_GET['action'] == 'delete') {
-    $pid = intval($_GET['requestID']);
-    $sql = "DELETE FROM request WHERE  `requestID`='$pid'";
-    if(mysqli_query($con, $sql)){
+    $pid = intval($_GET['pid']);
+    $sql = mysqli_query($con,"delete from request where requestID='$pid'");
+    
     echo '<script>alert("Request deleted")</script>';
     echo "<script>window.location.href='approverequest.php'</script>";
-    }
 }
 ?>
 
@@ -190,4 +186,3 @@ if ($_GET['action'] == 'delete') {
 </body>
 
 </html>
-<?php } ?>
