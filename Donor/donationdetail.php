@@ -113,21 +113,9 @@ if (isset($_POST['donate'])) {
             <div class="col-lg-6">
               <form id=donation_form class="donation_form" method="post">
                 <div class="row align-items-center">
-                  <div class="col-md-4">
+                  <div class="col-md-8" style="margin: 0 auto;">
                     <div class="single_amount">
-                      <div class="input_field">
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
-                          </div>
-                          <input type="text" class="form-control" placeholder="500" aria-label="Username" aria-describedby="basic-addon1" name="radio-group">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="single_amount">
-                      <div class="fixed_donat d-flex align-items-center justify-content-between">
+                      <div class="fixed_donat d-flex">
                         <div class="select_prise">
                           <h4>Enter Amount:</h4>
                         </div>
