@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
     }
     if ($query) {
         echo "<script>alert('Successfully Registered. You can login now');</script>";
-        echo "<script>window.location.href ='../index.html'</script>";
+        echo "<script>window.location.href ='index.html'</script>";
     }
 }
 ?>

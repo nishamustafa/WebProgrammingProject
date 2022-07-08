@@ -69,48 +69,27 @@ check_login();
             <br>
             <br>
             <div class="row justify-content-center">
+              <?php 
+              $pid=intval($_GET['pid']);
+              $query=mysqli_query($con,"select * from request");
+              $cnt=1;
+              while($row=mysqli_fetch_array($query))
+              {
+              ?>
                 <div class="col-lg-4 col-md-6">
                     <div class="donation">
                         <div class="donation_pic">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="donationpic">
+                            <img src="../requestIMG/<?php echo $row['requestIMG']; ?>" alt="donationpic" width="240" height="160" style="margin:0px 50px">
                         </div>
                         <div class="donation_content">
-                            <h4>People In Need</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="donation1.php" class="read_more">Read More</a>
+                            <h4><?php echo $row['title']; ?></h4>
+                            <p><?php echo $row['Description']; ?></p>
+                            <p>Goal : RM<?php echo $row['goal']; ?>.</p>
+                            <a href="donationdetail.php?pid=<?php echo $row['requestID']?>" class="read_more" style="color:blue">Donate</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="donation">
-                        <div class="donation_pic">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="donationpic">
-                        </div>
-                        <div class="donation_content">
-                            <h4>People In Need</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="donation2.php" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="donation">
-                        <div class="donation_pic">
-                            <img src="https://picsum.photos/seed/picsum/200/300" alt="donationpic">
-                        </div>
-                        <div class="donation_content">
-                            <h4>People In Need</h4>
-                            <p>Lorem ipsum, or lipsum as it is 
-                                sometimes known, is dummy 
-                                text used in laying out print.</p>
-                            <a href="donation3.php" class="read_more">Read More</a>
-                        </div>
-                    </div>
-                </div>
+              <?php } ?>
             </div>
         </div>
     </section>

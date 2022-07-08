@@ -4,27 +4,6 @@ error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
-
-if(isset($_POST['submit']))
-{
-    $title=$_POST['title'];
-    $desc=$_POST['description'];
-    $goal=$_POST['goal'];
-    $rimage=$_FILES["uploadfile"]["name"];
-    $tempimage=$_FILES["uploadfile"]["tmp_name"];
-    $folder="../requestIMG/" . $rimage;
-    $donorID=$_SESSION['id'];
-    $status=1;
-    $query=mysqli_query($con,"insert into request(recipient_fk,title,Description,goal,requestIMG,Status) values('$donorID','$title','$desc','$goal','$rimage','$status')");
-    if($query)
-    {
-        echo "<script>alert('Request Success. Wait for status');</script>";
-        move_uploaded_file($tempimage, $folder);
-    }else{
-        echo "<script>alert('Request error, try again.');</script>";
-        echo "<script>window.location.href ='requestdonation.php'</script>";
-    }
-}
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +20,7 @@ if(isset($_POST['submit']))
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Donate4All-RequestDonation</title>
+    <title>Donate4All-Donation History</title>
 
     <!-- slider stylesheet -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -67,38 +46,55 @@ if(isset($_POST['submit']))
         <!-- end header section -->
     </div>
 
-    <!-- start form -->
+    <!-- start profile -->
     <br>
     <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="request-content">
-                        <div class="request-form">
-                            <h4>Request Form</h4>
-                            <br>
-                            <div class="border border-dark rounded mb-5 px-4 py-5">
-                                <form name="request" id="request" method="post" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" class="form-control" placeholder="Title" name="title" required>
+                <div class="card-title">
+                                    <h4>Donation History Table </h4>
+                                </div>
+                                <div class="bootstrap-data-table-panel">
+                                    <div class="table-responsive">
+                                        <table id="row-select" class="display table table-borderd table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Donation ID</th>
+                                                    <th>Amount</th>
+                                                    <th>Status</th>
+                                                    <th>Donation Date</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+                                                <?php include 'include/retrievedonation.php'; ?>
+
+                                                <?php if ($result->num_rows > 0) : ?>
+
+                                                    <?php while ($array = mysqli_fetch_row($result)) : ?>
+
+                                                        <tr>
+                                                            <th scope="row"><?php echo $array[0]; ?></th>
+                                                            <td>RM <?php echo $array[1]; ?></td>
+                                                            <td><?php 
+                                                            if($array[2]==1)
+                                                            echo "Has been received by recipient";
+                                                            else
+                                                            echo "Not been received by recipient"; ?></td>
+                                                            <td><?php echo $array[3]; ?></td>
+                                                        </tr>
+                                                    <?php endwhile; ?>
+                                                <?php else : ?>
+                                                    <tr>
+                                                        <td colspan="3" rowspan="1" headers="">No Data Found</td>
+                                                    </tr>
+                                                <?php endif; ?>
+                                                <?php mysqli_free_result($result); ?>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Description</label>
-                                        <textarea class="form-control" name="description" rows="4" cols="50" placeholder="Description"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Goal</label>
-                                        <input type="text" class="form-control" placeholder="Goal" name="goal" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Image Upload</label>
-                                        <input type="file" class="form-control" placeholder="Upload File" name="uploadfile" required>
-                                    </div>
-                                    <button type="submit" id="submit" name="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Submit</button>
-                                </form>
+                                </div>
                             </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +106,7 @@ if(isset($_POST['submit']))
         <section class="container-fluid footer_section">
             <p>
                 © 2022 All Rights Reserved By
-                <a href="home.php">Donate4All</a>
+                <a href="index.html">Donate4All</a>
             </p>
         </section>
         <!-- footer section -->
