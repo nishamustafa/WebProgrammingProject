@@ -438,12 +438,12 @@ a:focus {
 
 .why_section {
   color: #f9fcfb;
-  background: -webkit-gradient(linear, left top, right top, from(#1b3374), to(#8f4fe8));
-  background: linear-gradient(to right, #1b3374, #8f4fe8);
+  background: -webkit-gradient(linear, left top, right top, from(#53586B), to#2B3044));
+  background: linear-gradient(to right, #53586B, #2B3044);
 }
 
 .why_section .custom_heading-container h2 {
-  border-color: #f9fcfb;
+  border-cor: #f9fcfb;
 }
 
 .why_section p {
