@@ -33,6 +33,10 @@
                             <a class="nav-link" href="requestdonation.php">
                               Request Donation</a>
                           </li>
+                          <li class="dropdown-item">
+                            <a class="nav-link" href="requesthistory.php">
+                              Request History</a>
+                          </li>
                         </ul>
                       </li>
                     </ul>

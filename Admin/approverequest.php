@@ -115,7 +115,11 @@ if ($_GET['action'] == 'delete') {
                                                             <td><?php echo $row['title']; ?></td>
                                                             <td><?php echo $row['Description']; ?></td>
                                                             <td><?php echo $row['goal']; ?></td>
-                                                            <td><?php echo $row['Status']; ?></td>
+                                                            <td><?php 
+                                                            if($row['Status']==1)
+                                                            echo "Approved";
+                                                            else
+                                                            echo "Not Approved"; ?></td>
                                                             <td><?php echo $row['RequestDate']; ?></td>
                                                             <td>
 
