@@ -46,9 +46,9 @@ body {
 /*header section*/
 .hero_area {
   height: 94vh;
-  background: -webkit-gradient(linear, left top, right top, from #53586B), to(#2B3044));
+  background: -webkit-gradient(linear, left top, right top, from(#53586B), to#2B3044));
   background: linear-gradient(to right, #53586B, #2B3044);
-}
+} 
 
 .hero_area::before {
   content: "";
@@ -118,7 +118,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  background-image: url(../images/donate4all.png);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -159,10 +159,10 @@ a:focus {
   background-size: 40px;
 }
 .dropdown-menu{
-  background-color: #252525;
+  background-color: #334950;
 }
 .dropdown-item:hover{
-  background:#864ddf;
+  background:#feb543;
 }
 
 /*end header section*/
@@ -217,14 +217,14 @@ a:focus {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
-  background-color: #383a90;
+  background-color: #334950;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev:hover,
 .slider_section .carousel_btn-container .carousel-control-next:hover {
-  background-color: #1F1B28;
+  background-color: #feb543;
 }
 
 .slider_section .carousel_btn-container .carousel-control-prev {
@@ -250,7 +250,7 @@ a:focus {
   text-align: center;
   line-height: 55px;
   color: #f9fcfb;
-  background-color: #547bfe;
+  background-color: #334950;
   opacity: 1;
   display: none;
 }
@@ -267,7 +267,7 @@ a:focus {
 .slider_detail-box .btn-box a {
   display: inline-block;
   padding: 12px 40px;
-  background-color: #feb543;
+  background-color: #F7BF10;
   color: #f9fcfb;
   border-radius: 25px;
   -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
@@ -284,12 +284,12 @@ a:focus {
 }
 
 .slider_img-box {
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
+  margin: auto;
 }
 
 .slider_img-box img {
-  width: 100%;
+  width: 120%;
 }
 
 .welcome_section {
@@ -297,12 +297,12 @@ a:focus {
 }
 
 .welcome_section .img-box {
-  width: 65%;
+  width: 50%;
   margin: 0 auto;
 }
 
 .welcome_section .img-box img {
-  width: 100%;
+  width: 80%;
 }
 
 .welcome_section .detail-box {
@@ -312,7 +312,7 @@ a:focus {
 .welcome_section .detail-box a {
   display: inline-block;
   padding: 12px 40px;
-  background-color: #feb543;
+  background-color: #F7BF10;
   color: #f9fcfb;
   border-radius: 25px;
   -webkit-box-shadow: 0px 2px 7px 0px rgba(32, 50, 117, 0.26);
@@ -327,15 +327,6 @@ a:focus {
   -webkit-transform: translateY(-7px);
           transform: translateY(-7px);
 }
-
-.donation_section {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.donation {
-  margin-top:40px;
-}
-
 
 .service_section {
   text-align: center;
@@ -495,7 +486,7 @@ a:focus {
   background-repeat: no-repeat;
   background-size: 14px;
   background-position: center;
-  background-color: #383a90;
+  background-color: #334950;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -724,12 +715,13 @@ a:focus {
 /* end info section */
 /* footer section*/
 .footer_section {
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer_section p {
@@ -744,8 +736,237 @@ a:focus {
   color: #f9fcfb;
 }
 
-.footer_text{
-  margin-top:auto;
+/* line 58, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .input_field .input-group {
+  width: 100%;
+  border: 1px solid violet;
+  border-radius: 7px;
+  padding: 5px 10px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* line 64, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .input_field .input-group .input-group-text {
+  font-size: 16px;
+  background: transparent;
+  border: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* line 71, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .input_field .input-group .form-control {
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border-bottom: 0;
+  border-top: 0;
+  border-radius: 0;
+  border-right: 0;
+  padding: 0 0 0 25px;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #000;
+}
+
+/* line 82, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .input_field .input-group .form-control::placeholder {
+  font-size: 16px;
+  color: #7A7B7C;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* line 88, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .input_field .input-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* line 96, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .single_amount .fixed_donat {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 18px 27px;
+  border-radius: 7px;
+  border: 1px solid violet;
+  display: block;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  /* line 96, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+  .make_donation_area .donation_form .single_amount .fixed_donat {
+    display: block !important;
+    margin-top: 15px;
+  }
+}
+
+/* line 108, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .single_amount .fixed_donat .select_prise h4 {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #7A7B7C;
+  margin-bottom: 0;
+}
+
+/* line 116, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donation_form .single_amount .fixed_donat .single_doonate label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7A7B7C;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  /* line 115, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+  .make_donation_area .donation_form .single_amount .fixed_donat .single_doonate {
+    width: 33.33%;
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+/* line 133, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_donation.scss */
+.make_donation_area .donate_now_btn {
+  margin-top: 50px;
+}
+
+.boxed-btn4 {
+  color: #fff;
+  display: inline-block;
+  padding: 13px 44px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background: purple;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* line 67, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
+.boxed-btn4:hover {
+  background: #fff;
+  color: purple;
+  border: 1px solid purple;
+}
+
+/* line 72, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
+.boxed-btn4:focus {
+  outline: none;
+}
+
+/* line 75, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_btn.scss */
+.boxed-btn4.large-width {
+  width: 220px;
+}
+
+.make_donation_area .donate_now_btn {
+  margin-top: 50px;
+}
+
+.section_title h3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #191d34;
+  z-index: 1;
+  line-height: 1.3;
+}
+
+/* line 9, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+.section_title h3 span {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+/* line 13, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+.section_title h3 span::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: violet;
+  height: 10px;
+  width: 100%;
+  content: '';
+  opacity: .5;
+  bottom: 7px;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .section_title h3 {
+    font-size: 25px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 2, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .section_title h3 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 34, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .section_title h3 br {
+    display: none;
+  }
+}
+
+/* line 40, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+.section_title p {
+  font-size: 16px;
+  color: #6b6a6a;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  /* line 45, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .section_title p br {
+    display: none;
+  }
+}
+
+/* line 53, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  /* line 53, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .mb-100 {
+    margin-bottom: 40px;
+  }
+}
+
+/* line 59, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+.mb-55 {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 767px) {
+  /* line 59, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_section_title.scss */
+  .mb-55 {
+    margin-bottom: 40px;
+  }
 }
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */

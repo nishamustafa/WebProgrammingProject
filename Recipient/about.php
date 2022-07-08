@@ -10,8 +10,9 @@ check_login();
 <html>
   <head>
     <meta charset="utf-8" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="about.css"/>
     <!-- Mobile Metas -->
     <meta
       name="viewport"
@@ -55,9 +56,7 @@ check_login();
 
   <body class="sub_page">
     <div class="hero_area">
-      <!-- header section strats -->
-      <?php include('include/mainheader.php');?>
-      <!-- end header section -->
+    <?php include('include/mainheader.php');?>
     </div>
 
     <!-- welcome section -->
@@ -67,10 +66,12 @@ check_login();
     <div class="footer_bg">
       <!-- footer section -->
       <section class="container-fluid footer_section">
-        <p>
-          © 2022 All Rights Reserved By
-          <a href="home.php">Donate4All</a>
-        </p>
+        <div class="text-center footer_text">
+          <p>
+              © 2022 All Rights Reserved By
+              <a href="home.php">Donate4All</a>
+          </p>
+      </div>
       </section>
       <!-- footer section -->
     </div>
