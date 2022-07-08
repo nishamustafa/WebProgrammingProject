@@ -55,9 +55,7 @@ check_login();
 
   <body>
     <div class="hero_area">
-      <!-- header section strats -->
-      <?php include('include/mainheader.php');?>
-      <!-- end header section -->
+    <?php include('include/mainheader.php');?>
       <!-- slider section -->
       <section class="slider_section">
         <div
@@ -76,9 +74,6 @@ check_login();
             <li data-target="#carouselExampleIndicators" data-slide-to="1">
               02
             </li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2">
-              03
-            </li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -87,14 +82,14 @@ check_login();
                   <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
-                        Example <br />
-                        Slider 1 <br />
-                        Of Our Donation
+                        What is Donate4All? <br/>
                       </h1>
                       <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
+                        Donate4All is an online donation platform created to aid
+                        the ones affected since the COVID-19 pandemic first
+                        occured in Malaysia. This platform gives you effective
+                        access to donate and receive donations with a simple
+                        click of a button!
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn-1"> Read More </a>
@@ -103,7 +98,7 @@ check_login();
                   </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="images/slider.gif" alt="" />
                     </div>
                   </div>
                 </div>
@@ -115,14 +110,14 @@ check_login();
                   <div class="col-lg-5 col-md-6">
                     <div class="slider_detail-box">
                       <h1>
-                        Example <br />
-                        Slider 2 <br />
-                        Of Our Donation
+                        How do you contribute <br/>
+                        to Donate4All? <br/>
                       </h1>
                       <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
+                        Simply sign up for a Donate4All account to be walked through
+                        the fundamental processes of donating and receiving donations.
+                        With easy clicks of the mouse and forms, you will be navigated
+                        through the pages to deliver your needs!
                       </p>
                       <div class="btn-box">
                         <a href="" class="btn-1"> Read More </a>
@@ -131,41 +126,12 @@ check_login();
                   </div>
                   <div class="col-md-6">
                     <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
+                      <img src="images/slider.gif" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-5 col-md-6">
-                    <div class="slider_detail-box">
-                      <h1>
-                        Example <br />
-                        Slider 3 <br />
-                        Of Our Donation
-                      </h1>
-                      <p>
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi
-                      </p>
-                      <div class="btn-box">
-                        <a href="" class="btn-1"> Read More </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="slider_img-box">
-                      <img src="images/slider-img.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="carousel_btn-container">
             <a
               class="carousel-control-prev"
@@ -189,17 +155,17 @@ check_login();
       <!-- end slider section -->
     </div>
 
-    <!-- welcome section -->
     <?php include('include/mainwelcome.php');?>
-    <!-- end welcome section -->
 
     <div class="footer_bg">
       <!-- footer section -->
       <section class="container-fluid footer_section">
-        <p>
-          © 2022 All Rights Reserved By
-          <a href="home.php">Donate4All</a>
-        </p>
+        <div class="text-center footer_text">
+          <p>
+              © 2022 All Rights Reserved By
+              <a href="home.php">Donate4All</a>
+          </p>
+      </div>
       </section>
       <!-- footer section -->
     </div>
