@@ -70,7 +70,8 @@ if (isset($_POST['submit'])) {
                 <div class="col-lg-6">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="index.html"><span>Donate4All</span></a>
+                            <a href="index.html">
+                            <img src="images/donate4all2.png" height="70px" alt="">
                         </div>
                         <div class="login-form">
                             <h4>Registration</h4>
