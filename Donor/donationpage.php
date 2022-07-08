@@ -37,6 +37,11 @@ check_login();
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <body class="sub_page">
+    <div class="hero_area">
+    <?php include('include/mainheader.php');?>
+    </div>
+
     <!-- donation section -->
     <section class="donation_section layout_padding">
         <div class="container">
@@ -67,7 +72,8 @@ check_login();
                               overflow: hidden;
                               "><?php echo $row['Description']; ?></p>
                             <p>Goal : RM<?php echo $row['goal']; ?>.</p>
-                            <a href="donationdetail.php?pid=<?php echo $row['requestID']?>" class="read_more" style="color:blue">Donate</a>
+                            <a href="donationdetail.php?pid=<?php echo $row['requestID'] ?>" class="read_more" style="color:blue"><button type="button" class="btn btn-primary">Donate</button>
+                            </a>
                         </div>
                     </div>
                 </div>
