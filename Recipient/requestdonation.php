@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
     $tempimage=$_FILES["uploadfile"]["tmp_name"];
     $folder="../requestIMG/" . $rimage;
     $donorID=$_SESSION['id'];
-    $status=1;
+    $status=0;
     $query=mysqli_query($con,"insert into request(recipient_fk,title,Description,goal,requestIMG,Status) values('$donorID','$title','$desc','$goal','$rimage','$status')");
     if($query)
     {
