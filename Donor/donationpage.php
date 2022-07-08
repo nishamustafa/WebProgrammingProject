@@ -74,7 +74,6 @@ check_login();
               <?php } ?>
             </div>
           </div>
-        <?php } ?>
       </div>
     </div>
   </section>
