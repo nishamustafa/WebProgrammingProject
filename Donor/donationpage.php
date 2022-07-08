@@ -83,7 +83,12 @@ check_login();
                         </div>
                         <div class="donation_content">
                             <h4><?php echo $row['title']; ?></h4>
-                            <p><?php echo $row['Description']; ?></p>
+                            <p style="
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                              "><?php echo $row['Description']; ?></p>
                             <p>Goal : RM<?php echo $row['goal']; ?>.</p>
                             <a href="donationdetail.php?pid=<?php echo $row['requestID']?>" class="read_more" style="color:blue">Donate</a>
                         </div>
