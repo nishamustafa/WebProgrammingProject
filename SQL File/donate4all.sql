@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2022 at 10:55 PM
+-- Generation Time: Jul 08, 2022 at 12:10 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -61,7 +61,9 @@ CREATE TABLE `donation` (
 
 INSERT INTO `donation` (`donationID`, `donor_fk`, `request_fk`, `Amount`, `Status`, `DonationDate`) VALUES
 (1, 1, 10, 50, 1, '2022-07-07 20:48:09'),
-(3, 1, 10, 500, 1, '2022-07-07 20:51:58');
+(3, 1, 10, 500, 1, '2022-07-07 20:51:58'),
+(4, 2, 10, 233, 1, '2022-07-08 07:57:29'),
+(7, 2, 9, 220, 1, '2022-07-08 09:26:14');
 
 -- --------------------------------------------------------
 
@@ -112,7 +114,8 @@ CREATE TABLE `recipient` (
 INSERT INTO `recipient` (`recipientID`, `Username`, `Password`, `Name`, `Gender`, `Age`, `Email`, `PhoneNumber`) VALUES
 (1, 'marnisha', '900150983cd24fb0d6963f7d28e17f72', 'Marnisha Binti Mustafa', 'male', 21, 'marnisha@gmail.com', '0128324242'),
 (2, 'Mat', '202cb962ac59075b964b07152d234b70', 'Mat Kilau', 'male', 22, 'matkilau@power.com', '0192382242'),
-(3, 'JabbaThink', '202cb962ac59075b964b07152d234b70', 'Jabba Nice To Think', 'female', 20, 'jabba@gmail.com', '0134732442');
+(3, 'JabbaThink', '202cb962ac59075b964b07152d234b70', 'Jabba Nice To Think', 'female', 20, 'jabba@gmail.com', '0134732442'),
+(7, 'testuser1', '5a105e8b9d40e1329780d62ea2265d8a', 'Testingforslide', 'female', 25, 'testuser1@gmail.com', '0192344224');
 
 -- --------------------------------------------------------
 
@@ -136,10 +139,11 @@ CREATE TABLE `request` (
 --
 
 INSERT INTO `request` (`requestID`, `recipient_fk`, `title`, `Description`, `goal`, `requestIMG`, `Status`, `RequestDate`) VALUES
-(8, 1, 'My house has been hit by the flood', 'Recently there has been a flood that hit my hometown, currently my family and I are staying in 5 star resort, so to ease our pain I would like to request donation to help my family build our house again. Thank you.', 2000, 'house.jpg', 1, '2022-07-07 18:33:58'),
-(9, 1, 'My son has been diagnosed with covid-19', 'I would like to get some help in covering his medical payment', 5000, 'shutterstock_624801452.png', 1, '2022-07-07 18:40:38'),
-(10, 2, 'I have no money to buy foods for my family', 'During the pandemic, I lost my job and currently I cannot support my family.', 1000, '43c6e71f-070f-470b-8850-df1ba44b41e1.jpg', 1, '2022-07-07 18:44:37'),
-(11, 3, 'Tolong banyak yang hilang', 'Saya gak bisa berbicara bahasa inggeris, tetapi saya perlukan bantuan dengan alatan rumah tidak mencukupi di rumah saya. Mohon sumbangkan', 1000, '1zpld7rxcb831.jpg', 1, '2022-07-07 18:46:45');
+(8, 1, 'My house has been hit by the flood', 'Recently there has been a flood that hit my hometown, currently my family and I are staying in my mother\'s house, so to ease our pain I would like to request donation to help my family build our house again. Thank you.', 2000, 'house.png', 1, '2022-07-08 09:44:17'),
+(9, 1, 'My son has been diagnosed with covid-19', 'I would like to get some help in covering his medical payment', 5000, 'kid.png', 1, '2022-07-08 09:49:47'),
+(10, 2, 'I have no money to buy foods for my family', 'During the pandemic, I lost my job and currently I cannot support my family.', 1000, 'kidstarving.png', 1, '2022-07-08 09:51:15'),
+(11, 3, 'Donation for oxygen supply', 'Currently my health is not good and I can only rely oxygen supply, and it is not enough for my family to support.', 1000, 'alatbantuanpernafasan.png', 1, '2022-07-08 09:53:49'),
+(12, 2, 'Donation for physical therapy', 'My father just woke up from coma, and currently he in rehabilitation. But our family is not able to support him financially because of Covid-19.', 4000, 'types-of-physical-therapy.jpeg', 1, '2022-07-08 10:07:23');
 
 --
 -- Indexes for dumped tables
@@ -180,7 +184,7 @@ ALTER TABLE `request`
 -- AUTO_INCREMENT for table `donation`
 --
 ALTER TABLE `donation`
-  MODIFY `donationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `donationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `donor`
@@ -192,13 +196,13 @@ ALTER TABLE `donor`
 -- AUTO_INCREMENT for table `recipient`
 --
 ALTER TABLE `recipient`
-  MODIFY `recipientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `recipientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `request`
 --
 ALTER TABLE `request`
-  MODIFY `requestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `requestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
