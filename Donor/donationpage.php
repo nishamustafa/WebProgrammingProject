@@ -53,12 +53,12 @@ check_login();
             <div class="row justify-content-center">
               <?php 
               $pid=intval($_GET['pid']);
-              $query=mysqli_query($con,"select * from request");
+              $query=mysqli_query($con,"select * from request where status='1'");
               $cnt=1;
               while($row=mysqli_fetch_array($query))
               {
               ?>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="donation">
                         <div class="donation_pic">
                             <img src="../requestIMG/<?php echo $row['requestIMG']; ?>" alt="donationpic" width="240" height="160" style="margin:0px 50px">
