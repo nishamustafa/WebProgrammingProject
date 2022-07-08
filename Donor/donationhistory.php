@@ -101,6 +101,7 @@ check_login();
         <br>
     <!-- end form -->
     <br><br><br><br>
+    <br> <br> <br> <br>
     <div class="footer_bg">
         <!-- footer section -->
         <section class="container-fluid footer_section">
