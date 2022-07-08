@@ -37,45 +37,49 @@ check_login();
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
-</head>
+  <body class="sub_page">
+    <div class="hero_area">
+    <?php include('include/mainheader.php');?>
+    </div>
 
-<body class="sub_page">
-  <div class="hero_area">
-    <!-- header section strats -->
-    <?php include('include/mainheader.php'); ?>
-    <!-- end header section -->
-  </div>
-
-  <!-- donation section -->
-  <section class="donation_section layout_padding">
-    <div class="container">
-      <div class="custom_heading-container">
-        <h2>Make a Donation</h2>
-      </div>
-      <br>
-      <br>
-      <div class="row justify-content-center">
-        <?php
-        $pid = intval($_GET['pid']);
-        $query = mysqli_query($con, "select * from request where status='1'");
-        $cnt = 1;
-        while ($row = mysqli_fetch_array($query)) {
-        ?>
-          <div class="col-lg-4 col-md-6">
-            <div class="donation">
-              <div class="donation_pic">
-                <img src="../requestIMG/<?php echo $row['requestIMG']; ?>" alt="donationpic" width="240" height="160" style="margin:0px 50px">
-              </div>
-              <div class="donation_content">
-                <h4><?php echo $row['title']; ?></h4>
-                <p><?php echo $row['Description']; ?></p>
-                <p>Goal : RM<?php echo $row['goal']; ?>.</p>
-                <a href="donationdetail.php?pid=<?php echo $row['requestID'] ?>" class="read_more" style="color:blue"><button type="button" class="btn btn-primary">Donate</button>
-                </a>
-              </div>
+    <!-- donation section -->
+    <section class="donation_section layout_padding">
+        <div class="container">
+            <div class="custom_heading-container">
+                <h2>Make a Donation</h2>
+            </div>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+              <?php 
+              $pid=intval($_GET['pid']);
+              $query=mysqli_query($con,"select * from request");
+              $cnt=1;
+              while($row=mysqli_fetch_array($query))
+              {
+              ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="donation">
+                        <div class="donation_pic">
+                            <img src="../requestIMG/<?php echo $row['requestIMG']; ?>" alt="donationpic" width="240" height="160" style="margin:0px 50px">
+                        </div>
+                        <div class="donation_content">
+                            <h4><?php echo $row['title']; ?></h4>
+                            <p style="
+                              display: -webkit-box;
+                              -webkit-line-clamp: 2;
+                              -webkit-box-orient: vertical;
+                              overflow: hidden;
+                              "><?php echo $row['Description']; ?></p>
+                            <p>Goal : RM<?php echo $row['goal']; ?>.</p>
+                            <a href="donationdetail.php?pid=<?php echo $row['requestID'] ?>" class="read_more" style="color:blue"><button type="button" class="btn btn-primary">Donate</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+              <?php } ?>
             </div>
           </div>
-        <?php } ?>
       </div>
     </div>
   </section>

@@ -129,18 +129,10 @@ if (isset($_POST['donate'])) {
                     <div class="single_amount">
                       <div class="fixed_donat d-flex align-items-center justify-content-between">
                         <div class="select_prise">
-                          <h4>Select Amount:</h4>
+                          <h4>Enter Amount:</h4>
                         </div>
                         <div class="single_doonate">
-                          <input type="radio" id="blns_1" name="radio-group" value="50" checked>
-                          <label for="blns_1">50</label>
-                        </div>
-                        <div class="single_doonate">
-                          <input type="radio" id="blns_2" name="radio-group" value="100" checked>
-                          <label for="blns_2">100</label>
-                        </div>
-                        <div class="single_doonate">
-                          <input type="text" class="form-control" placeholder="Other" aria-label="Username" aria-describedby="basic-addon1" name="radio-group">
+                          <input type="text" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1" name="radio-group">
                         </div>
                       </div>
                     </div>
