@@ -160,9 +160,9 @@ check_login();
                       <i class="ti-link color-danger border-danger"></i>
                     </div>
                     <div class="stat-content dib">
-                      <div class="stat-text">Approved Donation</div>
+                      <div class="stat-text">Approved Request</div>
                       <div class="stat-digit">
-                      <?php $sql4= mysqli_query($con,"SELECT * FROM donation WHERE status='Approved'");
+                      <?php $sql4= mysqli_query($con,"SELECT * FROM request WHERE status='1'");
                         $row4 = mysqli_num_rows($sql4); 
 {
 ?>

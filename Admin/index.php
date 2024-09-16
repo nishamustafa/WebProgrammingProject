@@ -67,7 +67,7 @@ exit();
                 <div class="col-lg-6">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="../index.html">
+                            <a href="../index.html"></a>
                             <img src="images/donate4all2.png" height="70px" alt="">
                         </div>
                         <div class="login-form">
